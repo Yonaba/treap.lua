@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>treap.lua documentation</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>treap.lua</h1>
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>treap</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>treap</code></h1>
+<p><em>treap.lua</em>, a simple treap data structure implemented in Lua.</p>
+<p> Source on <a href="http://github.com/Yonaba/treap.lua">Github</a></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2017</li>
+        <li><strong>License</strong>: <a href="http://github.com/Yonaba/blob/master/LICENSE">MIT</a></li>
+        <li><strong>Author</strong>: <a href="http://github.com/Yonaba/">Roland Yonaba</a></li>
+    </ul>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#node">node (key[, priority])</a></td>
+	<td class="summary">Creates a treap node.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#find">find (root, key)</a></td>
+	<td class="summary">Finds a key in the treap</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#insert">insert (root, key)</a></td>
+	<td class="summary">Inserts a key in the treap</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#delete">delete (root, key)</a></td>
+	<td class="summary">Deletes a key in the treap</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#inorder">inorder (root, f[, ...])</a></td>
+	<td class="summary">In-order traversal.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#size">size (root)</a></td>
+	<td class="summary">Returns the treap size.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "node"></a>
+    <strong>node (key[, priority])</strong>
+    </dt>
+    <dd>
+    Creates a treap node.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+         a key
+        </li>
+        <li><span class="parameter">priority</span>
+         a numeric priority for the given key. Defaults to random value.
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        a node
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "find"></a>
+    <strong>find (root, key)</strong>
+    </dt>
+    <dd>
+    Finds a key in the treap
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">root</span>
+         a root node in the treap
+        </li>
+        <li><span class="parameter">key</span>
+         a key
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        a node (or nil)
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "insert"></a>
+    <strong>insert (root, key)</strong>
+    </dt>
+    <dd>
+    Inserts a key in the treap
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">root</span>
+         a root node in the treap
+        </li>
+        <li><span class="parameter">key</span>
+         a key
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        the root node
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "delete"></a>
+    <strong>delete (root, key)</strong>
+    </dt>
+    <dd>
+    Deletes a key in the treap
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">root</span>
+         a root node in the treap
+        </li>
+        <li><span class="parameter">key</span>
+         a key
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        the root node
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "inorder"></a>
+    <strong>inorder (root, f[, ...])</strong>
+    </dt>
+    <dd>
+    In-order traversal.  It maps <code>f (node, &hellip;)</code> on every node along the traversal.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">root</span>
+         a root node in the treap
+        </li>
+        <li><span class="parameter">f</span>
+         a function, defined as <code>f (node, &hellip;)</code>
+        </li>
+        <li><span class="parameter">...</span>
+         optional arguments to <code>f</code>
+         (<em>optional</em>)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "size"></a>
+    <strong>size (root)</strong>
+    </dt>
+    <dd>
+    Returns the treap size.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">root</span>
+         a root node in the treap
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2017-04-25 19:18:39 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
