@@ -27,7 +27,8 @@ before_install:
 script: "tsc -f spec/*"
 
 after_success:
-  - luacov-coveralls -c specs/.luacov
+  - coveralls -b .. -r .. -i ./src --dump c.report.json
+  - luacov-coveralls -j c.report.json -v
 
 notifications:
   email:
